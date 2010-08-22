@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# the right way:
+	#RewriteRule ^(.*)$ http://sysd.org/$1 [P]
+
+	# very-very wrong way; substitute by the above ASAP!!!
+	RewriteRule ^(.*)$ phproxy.php [L]
+</IfModule>
